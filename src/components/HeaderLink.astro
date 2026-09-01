@@ -1,0 +1,28 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+import '@/styles/button.scss'
+import {clsx} from "clsx";
+import { withBase } from '../utils/base';
+
+type Props = Omit<HTMLAttributes<'a'>, 'href'> & { href?: string };
+
+const {href, class: className, ...props} = Astro.props;
+
+const {pathname} = Astro.url;
+const resolvedHref = href ? withBase(href) : '/';
+const normalize = (p: string) => p.replace(/\/+$/, '') || '/';
+const isActive = normalize(pathname) === normalize(resolvedHref);
+---
+
+<a
+    href={resolvedHref}
+    target='_self'
+    class={clsx(
+        className,
+        'md link-button',
+        isActive ? 'button-solid-primary' : 'button-light-primary'
+    )}
+    {...props}
+>
+  <slot/>
+</a>
