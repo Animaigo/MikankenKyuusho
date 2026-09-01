@@ -2,7 +2,7 @@
 title: 'Show Case'
 description: 'Those sites who use this blog template'
 pubDate: 'Nov 1 2025'
-heroImage: '/images/case1.png'
+heroImage: '/images/case1.jpg'
 pinned: true
 tags:
   - show case

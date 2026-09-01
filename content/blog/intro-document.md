@@ -2,7 +2,7 @@
 title: 'Koibumi Astro Blog Document'
 description: 'Introduce how to use Koibumi Astro Blog'
 pubDate: 'Nov 1 2025'
-heroImage: '/images/case2.png'
+heroImage: '/images/case2.jpg'
 pinned: true
 tags:
   - document
